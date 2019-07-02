@@ -1,0 +1,46 @@
+% From https://www.overleaf.com/articles/addition-flashcards-1-to-9/hzyjfrtszzqx
+% With licence: Creative Commons CC BY 4.0
+% Licence link: https://creativecommons.org/licenses/by/4.0/legalcode
+% Original author: Christopher Tennant
+% Contents changed from the original
+\documentclass[frontgrid,letterpaper,12pt]{flacards}
+
+
+% \usepackage[scaled=0.85]{beramono}
+\usepackage{color}
+
+\usepackage{etoolbox}
+\pretocmd{\card}{\def\curhint{#1}}{}{}
+
+\pagesetup{3}{6}
+
+\usepackage{xeCJK}
+
+% \setCJKmainfont{AR PL UKai CN}
+\setmainfont{Linux Libertine O}
+% \setmainfont{mono}
+
+% \setmainfont{BitStream Vera Mono}
+
+
+\renewcommand{\cardtextstylef}{\Huge}
+\renewcommand{\cardtextstyleb}{\Huge}
+\renewcommand{\frfoot}{}
+\renewcommand{\brfoot}{}
+
+% Temporarily disable new lines when displaying the riddle on the back
+
+\renewcommand{\bcfoot}{\let\\\relax\footnotesize\curhint}
+% \renewcommand{\blfoot}{\footnotesize chris}
+% \renewcommand{\blfoot}{\footnotesize Ashley}
+% \renewcommand{\blfoot}{\footnotesize Casandra}
+% \renewcommand{\blfoot}{\footnotesize Jessica}
+
+\renewcommand{\flhead}{\footnotesize\thecardno}
+\renewcommand{\brhead}{\footnotesize\thecardno}
+
+\begin{document}
+
+\card{9+8}{17}
+
+\end{document}
